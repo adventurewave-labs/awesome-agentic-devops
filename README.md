@@ -115,6 +115,7 @@ The "development agents" side of the lifecycle — and the workflow machinery th
 - [dagger/dagger](https://github.com/dagger/dagger) ⭐16.3k — programmable CI/CD engine; its agent API powers agentic pipelines ([podcast E3 with Solomon Hykes](https://agenticdevops.fm/episodes/agentic-ci-cd-with-solomon-hykes-of-dagger)).
 - [microsoft/apm](https://github.com/microsoft/apm) — Agent Project Manager: Microsoft's spec-driven agent workflow runner.
 - [GitHub Next: Continuous AI](https://githubnext.com/projects/continuous-ai/) — research program behind self-improving repositories.
+- [marcuspat/turbo-flow](https://github.com/marcuspat/turbo-flow) ⭐176 — the rules layer for AI-written code: a fail-closed cross-model review gate (builder ≠ reviewer, verdict as required status check), git-versioned agent memory, and worktree isolation — pure bash, any harness.
 
 ## Agent Frameworks & Toolkits
 
