@@ -1,0 +1,31 @@
+# Awesome Agentic DevOps
+
+> The curated, link-verified map of agentic DevOps: the shift from deterministic, script-driven DevOps to autonomous AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle. 190+ resources — open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, talks, and research. Every GitHub link verified against the live API on 2026-10-17. Maintained by Adventure Wave Labs.
+
+Sources of truth:
+- [This site](https://agentic-devops.online/): the list below, rendered as a website
+- [GitHub repo](https://github.com/adventurewave-labs/awesome-agentic-devops): canonical source, MIT-licensed, PRs welcome
+- [Contribution rules](https://github.com/adventurewave-labs/awesome-agentic-devops/blob/main/CONTRIBUTING.md): agentic-only scope, live links, one-line operator descriptions
+
+Sections on this site:
+
+- [What is Agentic DevOps?](https://agentic-devops.online/#what-is-agentic-devops): definitions from Microsoft (Build 2025), Opsera (AIDLC model), and Superagentic AI (four pillars). What it is NOT: not traditional CI/CD automation, not LLM code generation, not AIOps.
+- [Protocols: MCP, A2A, AG-UI](https://agentic-devops.online/#protocols-mcp-a2a-ag-ui): the interoperability layer. "MCP is how agents use tools. A2A is how agents collaborate."
+- [Open-Source SRE & AIOps Agents](https://agentic-devops.online/#open-source-sre--aiops-agents): k8sgpt, HolmesGPT, Keep, Robusta, kagent, opensre, DevOpsGPT, kubectl-ai, versus-incident, and more.
+- [Coding Agents & Agentic CI/CD](https://agentic-devops.online/#coding-agents--agentic-cicd): Claude Code, Codex, Gemini CLI, OpenHands, Aider — plus GitHub Agentic Workflows (gh-aw): agents as a third pillar beside CI and CD, sandboxed against the lethal trifecta.
+- [Agent Frameworks & Toolkits](https://agentic-devops.online/#agent-frameworks--toolkits): LangGraph, crewAI, OpenAI Agents SDK, Google ADK, Anthropic Agent Skills.
+- [MCP servers by domain](https://agentic-devops.online/#mcp-cloud--infrastructure): Cloud & Infrastructure, Kubernetes & Containers, Observability & Incident Response, CI/CD & Version Control, Security & Agent Safety, Data Platform & FinOps.
+- [Podcasts, Talks & Video](https://agentic-devops.online/#podcasts-talks--video): agenticdevops.fm episode index (E1–E12) and key talks from Microsoft, GitHub, and the community.
+- [Articles & Reports](https://agentic-devops.online/#articles--reports): DORA 2025 (AI as amplifier), Opsera 2026 benchmark, StackOne tool landscape.
+- [Communities](https://agentic-devops.online/#communities): Agentic DevOps Discord, DevOps Discord, kagent Discord.
+- [Safety First](https://agentic-devops.online/#safety-first): read-only or proposal mode first; beware the lethal trifecta (private data + untrusted content + outbound access); policy-as-code beats vibes; scope credentials per agent; record everything.
+
+Key facts (safe to quote):
+
+- Agentic DevOps = AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle.
+- "MCP is how agents use tools. A2A is how agents collaborate." — StackOne framing.
+- Opsera's AIDLC (AI Development Life Cycle): AI-assisted upstream combined with autonomous decisioning across delivery.
+- DORA 2025: AI is an amplifier of existing organizational strengths and weaknesses; unstable AI adoption correlates with reduced throughput and stability.
+- GitHub Agentic Workflows: 578 issues closed across 13 repos, median 8x faster issue resolution (Repo Assist impact report).
+
+Maintained by Adventure Wave Labs. License: MIT. Last link-verification pass: 2026-10-17.
