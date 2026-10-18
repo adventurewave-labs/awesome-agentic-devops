@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/hero.svg" width="100%" alt="Awesome Agentic DevOps — animated pipeline: commit → CI → AI agent → Kubernetes → deploy, with an MCP orbit and a live terminal prompt">
+</p>
+
 # Awesome Agentic DevOps
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -6,6 +10,8 @@
 A curated list of **Agentic DevOps** resources — the shift from deterministic, script-driven DevOps to autonomous AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle.
 
 Curated from six seed sources, then extended with independent web, GitHub, and YouTube research. **Every GitHub link was verified against the live API on 2026-10-17** (archived/moved repos were caught and handled — see the ⚠️ notes). Star counts are ⭐ as of that date.
+
+**🌐 Web directory:** [awesome-agentic-devops.vercel.app](https://awesome-agentic-devops.vercel.app) — this list as a searchable, filterable single-page site.
 
 **Sources:** [agenticdevops.fm](https://agenticdevops.fm) · [Opsera: What is Agentic DevOps?](https://opsera.ai/blog/what-is-agentic-devops) · [agenticsorg/devops](https://github.com/agenticsorg/devops) · [super-agentic.ai](https://super-agentic.ai/agentic-devops) · [DevOpsAIguru123/awesome-agentic-devops](https://github.com/DevOpsAIguru123/awesome-agentic-devops) · [agenticdevops/awesome-devops-mcp](https://github.com/agenticdevops/awesome-devops-mcp) — plus DORA, Microsoft/GitHub, Harness, StackOne, and the open-source SRE-agent ecosystem.
 
