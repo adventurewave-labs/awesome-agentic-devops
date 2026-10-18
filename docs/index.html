@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents</title>
+<meta name="description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
+<meta name="theme-color" content="#0d9488">
+<link rel="canonical" href="https://agentic-devops.online/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Awesome Agentic DevOps">
+<meta property="og:title" content="Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents">
+<meta property="og:description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
+<meta property="og:url" content="https://agentic-devops.online/">
+<meta property="og:image" content="https://agentic-devops.online/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents">
+<meta name="twitter:description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
+<meta name="twitter:image" content="https://agentic-devops.online/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://agentic-devops.online/#website",
+      "url": "https://agentic-devops.online/",
+      "name": "Awesome Agentic DevOps",
+      "description": "Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://agentic-devops.online/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://agentic-devops.online/#org",
+      "name": "Adventure Wave Labs",
+      "url": "https://github.com/adventurewave-labs",
+      "sameAs": ["https://github.com/adventurewave-labs"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://agentic-devops.online/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is agentic DevOps?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The shift from deterministic, script-driven DevOps to autonomous AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle — the framing used by Microsoft, Opsera, and the open-source SRE-agent ecosystem." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is agentic DevOps different from AIOps and traditional CI/CD automation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Traditional CI/CD is deterministic and AIOps surfaces anomalies; agentic DevOps reasons through causes and executes remediation. Per Opsera: not traditional automation (deterministic vs. probabilistic), not just LLM code generation (no agency), and not AIOps (which lacks reasoning and remediation)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which protocols do DevOps AI agents use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is how agents use tools, A2A (Agent2Agent) is how agents collaborate, and AG-UI handles agent-to-user interaction. MCP and A2A are now under the Linux Foundation." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you run agentic DevOps safely?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start read-only or in proposal mode; guard against the lethal trifecta of private data, untrusted content, and outbound access in one sandbox; gate probabilistic agents with policy-as-code; scope credentials per agent; and record every production-adjacent run." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff; --fg: #1e293b; --muted: #64748b; --accent: #0d9488;
+  --border: #e2e8f0; --code-bg: #f1f5f9; --link: #0d9488;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f172a; --fg: #e2e8f0; --muted: #94a3b8; --accent: #2dd4bf;
+    --border: #1e293b; --code-bg: #1e293b; --link: #2dd4bf; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--fg); }
+.topbar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: var(--bg); border-bottom: 1px solid var(--border); }
+.topbar .brand { font-weight: 700; color: var(--accent); text-decoration: none; font-size: 15px; }
+.topbar .gh { color: var(--muted); text-decoration: none; font-size: 14px; }
+main { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+h1 { font-size: 2rem; line-height: 1.25; margin: 8px 0 12px; }
+h2 { font-size: 1.4rem; margin-top: 2.2em; padding-bottom: .3em; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.1rem; margin-top: 1.6em; }
+a { color: var(--link); }
+h2 a, h3 a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+table { border-collapse: collapse; display: block; overflow-x: auto; max-width: 100%; }
+th, td { border: 1px solid var(--border); padding: 6px 12px; text-align: left; font-size: 14px; }
+th { background: var(--code-bg); }
+code { background: var(--code-bg); border-radius: 4px; padding: 1px 5px; font-size: 0.9em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+blockquote { margin: 1em 0; padding: 4px 16px; border-left: 4px solid var(--accent); background: var(--code-bg); border-radius: 0 6px 6px 0; color: var(--fg); }
+hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }
+footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13.5px; text-align: center; padding: 24px 20px 40px; }
+</style>
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="/">❯ agentic-devops.online</a>
+  <a class="gh" href="https://github.com/adventurewave-labs/awesome-agentic-devops">GitHub ↗</a>
+</nav>
+<main>
+<h1 id="awesome-agentic-devops">Awesome Agentic DevOps</h1>
+<p><a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a> <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a></p>
+<blockquote>
+<p><strong>Web:</strong> <a href="https://agentic-devops.online">agentic-devops.online</a> — this list as a website (GitHub Pages; rebuild with <code>scripts/build-site.sh</code> after editing this README).</p>
+</blockquote>
+<p>A curated list of <strong>Agentic DevOps</strong> resources — the shift from deterministic, script-driven DevOps to autonomous AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle.</p>
+<p>Curated from six seed sources, then extended with independent web, GitHub, and YouTube research. <strong>Every GitHub link was verified against the live API on 2026-10-17</strong> (archived/moved repos were caught and handled — see the ⚠️ notes). Star counts are ⭐ as of that date.</p>
+<p><strong>Sources:</strong> <a href="https://agenticdevops.fm">agenticdevops.fm</a> · <a href="https://opsera.ai/blog/what-is-agentic-devops">Opsera: What is Agentic DevOps?</a> · <a href="https://github.com/agenticsorg/devops">agenticsorg/devops</a> · <a href="https://super-agentic.ai/agentic-devops">super-agentic.ai</a> · <a href="https://github.com/DevOpsAIguru123/awesome-agentic-devops">DevOpsAIguru123/awesome-agentic-devops</a> · <a href="https://github.com/agenticdevops/awesome-devops-mcp">agenticdevops/awesome-devops-mcp</a> — plus DORA, Microsoft/GitHub, Harness, StackOne, and the open-source SRE-agent ecosystem.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#what-is-agentic-devops">What is Agentic DevOps?</a></li>
+<li><a href="#concepts--mental-models">Concepts &amp; Mental Models</a></li>
+<li><a href="#protocols-mcp-a2a-ag-ui">Protocols: MCP, A2A, AG-UI</a></li>
+<li><a href="#open-source-sre--aiops-agents">Open-Source SRE &amp; AIOps Agents</a></li>
+<li><a href="#coding-agents--agentic-cicd">Coding Agents &amp; Agentic CI/CD</a></li>
+<li><a href="#agent-frameworks--toolkits">Agent Frameworks &amp; Toolkits</a></li>
+<li><a href="#mcp-cloud--infrastructure">MCP: Cloud &amp; Infrastructure</a></li>
+<li><a href="#mcp-kubernetes--containers">MCP: Kubernetes &amp; Containers</a></li>
+<li><a href="#mcp-observability--incident-response">MCP: Observability &amp; Incident Response</a></li>
+<li><a href="#mcp-cicd--version-control">MCP: CI/CD &amp; Version Control</a></li>
+<li><a href="#mcp-security--agent-safety">MCP: Security &amp; Agent Safety</a></li>
+<li><a href="#mcp-data-platform--finops">MCP: Data Platform &amp; FinOps</a></li>
+<li><a href="#agent-skills-ecosystems">Agent Skills Ecosystems</a></li>
+<li><a href="#platforms--products">Platforms &amp; Products</a></li>
+<li><a href="#podcasts-talks--video">Podcasts, Talks &amp; Video</a></li>
+<li><a href="#articles--reports">Articles &amp; Reports</a></li>
+<li><a href="#communities">Communities</a></li>
+<li><a href="#safety-first">Safety First</a></li>
+<li><a href="#related-awesome-lists">Related Awesome Lists</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<hr />
+<h2 id="what-is-agentic-devops">What is Agentic DevOps?</h2>
+<p>A synthesis of the definitions this list is built on:</p>
+<blockquote>
+<p><strong>Microsoft (Build 2025):</strong> AI-powered agents operating as members of dev and ops teams — Copilot agents plus Azure automating, optimizing, and accelerating the entire software lifecycle. <a href="https://azure.microsoft.com/en-us/blog/agentic-devops-evolving-software-development-with-github-copilot-and-microsoft-azure">Azure blog</a> · <a href="https://azure.microsoft.com/en-us/solutions/devops">Azure solution page</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Opsera:</strong> The shift from static, human-managed scripts to autonomous agents that reason, self-correct, and manage the delivery pipeline — "autonomous decisioning across the software delivery lifecycle," not just autonomous execution. Combined with an AI-assisted upstream this becomes the <strong>AIDLC</strong> (AI Development Life Cycle). <a href="https://opsera.ai/blog/what-is-agentic-devops">Opsera</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Superagentic AI:</strong> A framework extending DevOps with autonomous agents capable of reasoning, decision-making, and adaptation — four pillars: automation→autonomy, intelligent orchestration, continuous learning, human-agent collaboration. <a href="https://super-agentic.ai/agentic-devops">super-agentic.ai</a></p>
+</blockquote>
+<blockquote>
+<p><strong>What it is NOT</strong> (per Opsera): not traditional CI/CD automation (deterministic vs. probabilistic), not just LLM code generation (no agency), and not AIOps (AIOps surfaces anomalies; agentic DevOps reasons through causes and executes remediation).</p>
+</blockquote>
+<h2 id="concepts--mental-models">Concepts &amp; Mental Models</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/blog/agentic-devops-evolving-software-development-with-github-copilot-and-microsoft-azure">Agentic DevOps — Microsoft Build 2025 announcement</a> — the canonical launch framing of the term.</li>
+<li><a href="https://developer.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle">Agentic DevOps in action: reimagining every phase of the developer lifecycle</a> — Microsoft Developer Blog, May 2025.</li>
+<li><a href="https://opsera.ai/blog/what-is-agentic-devops">What is Agentic DevOps? — Opsera</a> — three pillars (contextual reasoning, autonomous course-correction, dynamic tool orchestration) + human-in-the-loop; the AIDLC model; the PR-review bottleneck (AI code cuts PR-open time 58%, PRs sit 4.6× longer in review).</li>
+<li><a href="https://www.harness.io/blog/agentic-ai-in-devops-the-architects-guide-to-autonomous-infrastructure">Agentic AI in DevOps: The Architect's Guide to Autonomous Infrastructure — Harness</a> — the <strong>C-P-A agent anatomy</strong> (Context/Perception → Memory via RAG → Reasoning via ReAct → Tool use), three adoption horizons (Augmented Operator → Agent Swarms → Autonomous SRE), and guardrails for probabilistic ops (policy-as-code, contextual permissions, black-box recorder).</li>
+<li><a href="https://super-agentic.ai/agentic-devops">Agentic DevOps — Superagentic AI</a> — theoretical framework: four pillars, agent taxonomies (Development/QA/SRE/Optimization agents), traditional-vs-agentic comparison.</li>
+<li><a href="https://www.ibm.com/think/topics/agentic-workflows">What are Agentic Workflows? — IBM</a> — agentic workflows vs. static pipelines.</li>
+<li><a href="https://www.gsdcouncil.org/blogs/agentic-devops-autonomous-cloud-app-modernization">Agentic DevOps in Autonomous Cloud — GSDC</a> — observe → reason → plan → act loop for cloud ops.</li>
+<li><a href="https://github.com/microsoft/Build26-BRK202-azure-devops-meets-github-the-path-to-ai-powered-sdlc">The Agentic DevOps mental model — Microsoft Build 2026 BRK202</a> ⚠️ <em>session repo (archived after the event)</em>: hybrid GitHub + Azure Boards/Pipelines patterns for an AI-powered SDLC.</li>
+<li><a href="https://developers.redhat.com/articles/operationalize-ai-agents-on-openshift-with-kubernetes-primitives">Operationalize AI agents with OpenShift/Kubernetes — Red Hat</a> — running AIOps agents on K8s primitives.</li>
+</ul>
+<h2 id="protocols-mcp-a2a-ag-ui">Protocols: MCP, A2A, AG-UI</h2>
+<p>The interoperability layer that made agentic DevOps practical (<a href="https://www.stackone.com/blog/ai-agent-tools-landscape-2026">StackOne landscape framing</a>: "MCP is how agents use tools. A2A is how agents collaborate.")</p>
+<ul>
+<li><a href="https://modelcontextprotocol.io/">Model Context Protocol</a> — the open standard for agent↔︎tool integration (now under the Linux Foundation).</li>
+<li><a href="https://github.com/modelcontextprotocol/servers">modelcontextprotocol/servers</a> ⭐91.3k — official reference server implementations.</li>
+<li><a href="https://github.com/modelcontextprotocol/python-sdk">modelcontextprotocol/python-sdk</a> / <a href="https://github.com/modelcontextprotocol/typescript-sdk">typescript-sdk</a> — official SDKs.</li>
+<li><a href="https://github.com/modelcontextprotocol/registry">modelcontextprotocol/registry</a> — community registry service for MCP servers.</li>
+<li><a href="https://docs.docker.com/ai/mcp-catalog-and-toolkit/">Docker MCP Catalog &amp; Toolkit</a> — verified containerized MCP servers + gateway governance.</li>
+<li><a href="https://a2a-protocol.org/">A2A (Agent2Agent protocol)</a> · <a href="https://github.com/a2aproject/A2A">a2aproject/A2A</a> ⭐26.2k — agent-to-agent interoperability, originally from Google, now Linux Foundation.</li>
+<li><a href="https://docs.ag-ui.com/">AG-UI</a> — agent-to-user interaction protocol.</li>
+</ul>
+<h2 id="open-source-sre--aiops-agents">Open-Source SRE &amp; AIOps Agents</h2>
+<p>The fastest-moving corner of agentic DevOps: agents that diagnose clusters, investigate incidents, and remediate.</p>
+<ul>
+<li><a href="https://github.com/k8sgpt-ai/k8sgpt">k8sgpt-ai/k8sgpt</a> ⭐8.3k — "Giving Kubernetes Superpowers to everyone"; the original K8s SRE-diagnosis agent.</li>
+<li><a href="https://github.com/HolmesGPT/holmesgpt">HolmesGPT/holmesgpt</a> ⭐3.6k — CNCF Sandbox SRE agent for investigating production incidents and root causes across K8s, VMs, clouds, and databases (originated at Robusta).</li>
+<li><a href="https://github.com/keephq/keep">keephq/keep</a> ⭐12.4k — open-source AIOps and alert-management platform.</li>
+<li><a href="https://github.com/robusta-dev/robusta">robusta-dev/robusta</a> ⭐3.1k — smarter Prometheus alerts for Kubernetes: grouping, AI enrichment, automatic remediation.</li>
+<li><a href="https://github.com/kagent-dev/kagent">kagent-dev/kagent</a> ⭐4k — Cloud Native Agentic AI: run MCP tools and agents as Kubernetes CRDs (Solo.io).</li>
+<li><a href="https://github.com/Tracer-Cloud/opensre">Tracer-Cloud/opensre</a> ⭐12.1k — toolkit for building your own AI SRE agents.</li>
+<li><a href="https://github.com/kuafuai/DevOpsGPT">kuafuai/DevOpsGPT</a> ⭐6k — multi-agent system converting natural-language requirements into working DevOps workflows.</li>
+<li><a href="https://github.com/GoogleCloudPlatform/kubectl-ai">GoogleCloudPlatform/kubectl-ai</a> ⭐7.6k — AI-powered kubectl: conversational cluster operations.</li>
+<li><a href="https://github.com/VersusControl/versus-incident">VersusControl/versus-incident</a> ⭐863 — self-hosted AI SRE that learns normal system behavior and escalates anomalies.</li>
+<li><a href="https://github.com/Arvo-AI/aurora">Arvo-AI/aurora</a> ⭐436 — agentic incident management &amp; root-cause analysis built on LangGraph.</li>
+<li><a href="https://github.com/mezmo/aura">mezmo/aura</a> ⭐398 — production-tested SRE agent platform with guardrails and APIs.</li>
+<li><a href="https://github.com/SREGym/SREGym">SREGym/SREGym</a> ⭐355 — benchmark environment: "Can AI agents resolve production incidents?"</li>
+<li><a href="https://github.com/netdata/netdata">netdata/netdata</a> ⭐81k — AI-powered full-stack observability with an assistant layer.</li>
+<li><a href="https://github.com/kubeshark/kubeshark">kubeshark/kubeshark</a> ⭐12.1k — eBPF network observability for K8s (the telemetry these agents feed on).</li>
+<li><a href="https://github.com/metalbear-co/mirrord">metalbear-co/mirrord</a> ⭐5.4k — run local processes (including coding agents) as if inside your K8s cluster — agent-friendly dev/prod bridging.</li>
+<li><a href="https://github.com/chaterm/Chaterm">chaterm/Chaterm</a> ⭐3.1k — open-source AI terminal for cloud/infrastructure management.</li>
+</ul>
+<h2 id="coding-agents--agentic-cicd">Coding Agents &amp; Agentic CI/CD</h2>
+<p>The "development agents" side of the lifecycle — and the workflow machinery that turns them into 24/7 repo operators.</p>
+<ul>
+<li><a href="https://github.github.com/gh-aw/">GitHub Agentic Workflows (gh-aw)</a> — agents as "a third pillar beside CI and CD": markdown-defined workflows compiled to hardened Actions YAML, sandboxed against the "lethal trifecta" (private data + untrusted content + outbound access), with per-run/daily AI-credit caps. Source: <a href="https://github.com/github/gh-aw">github/gh-aw</a> ⭐5.4k · <a href="https://github.github.com/gh-aw/gallery/">Workflow gallery</a> · <a href="https://githubnext.com/projects/agentic-workflows/">GitHub Next project page</a> · <a href="https://github.github.com/gh-aw/introduction/architecture/">Security architecture</a>.</li>
+<li><a href="https://github.com/githubnext/repo-assist-impact">Repo Assist impact report</a> — measured results from running agentic workflows across 13 repos (578 issues closed, median 8× faster issue resolution).</li>
+<li><a href="https://github.com/anthropics/claude-code">anthropics/claude-code</a> ⭐151.7k — agentic terminal coding tool.</li>
+<li><a href="https://github.com/openai/codex">openai/codex</a> ⭐129.6k — lightweight terminal coding agent.</li>
+<li><a href="https://github.com/google-gemini/gemini-cli">google-gemini/gemini-cli</a> ⭐107.4k — open-source Gemini agent in the terminal.</li>
+<li><a href="https://github.com/OpenHands/OpenHands">OpenHands/OpenHands</a> ⭐91.1k — AI-driven autonomous development platform (formerly OpenDevin).</li>
+<li><a href="https://github.com/Aider-AI/aider">Aider-AI/aider</a> ⭐49.6k — AI pair programming in the terminal; git-native.</li>
+<li><a href="https://github.com/sweepai/sweep">sweepai/sweep</a> ⭐7.7k — AI junior dev turning issues into reviewed PRs (JetBrains).</li>
+<li><a href="https://github.com/github/awesome-copilot">github/awesome-copilot</a> ⭐40.1k — community instructions, agents, skills, and configs for GitHub Copilot.</li>
+<li><a href="https://github.com/dagger/dagger">dagger/dagger</a> ⭐16.3k — programmable CI/CD engine; its agent API powers agentic pipelines (<a href="https://agenticdevops.fm/episodes/agentic-ci-cd-with-solomon-hykes-of-dagger">podcast E3 with Solomon Hykes</a>).</li>
+<li><a href="https://github.com/microsoft/apm">microsoft/apm</a> — Agent Project Manager: Microsoft's spec-driven agent workflow runner.</li>
+<li><a href="https://githubnext.com/projects/continuous-ai/">GitHub Next: Continuous AI</a> — research program behind self-improving repositories.</li>
+</ul>
+<h2 id="agent-frameworks--toolkits">Agent Frameworks &amp; Toolkits</h2>
+<p>For building your own ops agents rather than adopting finished ones.</p>
+<ul>
+<li><a href="https://github.com/langchain-ai/langgraph">langchain-ai/langgraph</a> ⭐43.4k — graph-based agent orchestration.</li>
+<li><a href="https://github.com/crewAIInc/crewAI">crewAIInc/crewAI</a> ⭐59.8k — role-playing multi-agent orchestration.</li>
+<li><a href="https://github.com/openai/openai-agents-python">openai/openai-agents-python</a> ⭐30.1k — the Agents SDK (what powers agenticsorg/devops).</li>
+<li><a href="https://github.com/google/adk-python">google/adk-python</a> ⭐21.9k — Google Agent Development Kit.</li>
+<li><a href="https://github.com/GoogleCloudPlatform/agent-starter-pack">GoogleCloudPlatform/agent-starter-pack</a> — production agent templates with CI/CD, eval, observability.</li>
+<li><a href="https://github.com/anthropics/skills">anthropics/skills</a> ⭐181.8k — the Agent Skills standard and official repository.</li>
+<li><a href="https://strandsagents.dev/">Strands Agents</a> — AWS's open-source agent SDK (used in AWS's own CloudOps multi-agent samples).</li>
+<li><a href="https://github.com/aws-samples/sample-cloudops-multi-agent-platform">aws-samples/sample-cloudops-multi-agent-platform</a> — hierarchical multi-agent CloudOps reference on Bedrock AgentCore.</li>
+</ul>
+<h2 id="mcp-cloud--infrastructure">MCP: Cloud &amp; Infrastructure</h2>
+<p>Official-first MCP servers for cloud providers and IaC.</p>
+<ul>
+<li><a href="https://github.com/aws/agent-toolkit-for-aws">aws/agent-toolkit-for-aws</a> ⭐2.9k — the current official AWS MCP/skills/plugins toolkit (IAM-aware, CloudWatch/CloudTrail audit).</li>
+<li><a href="https://github.com/awslabs/mcp">awslabs/mcp</a> ⭐9.8k — the original AWS Labs MCP collection (being folded into Agent Toolkit).</li>
+<li><a href="https://github.com/microsoft/mcp">microsoft/mcp</a> ⭐3.8k — official catalog of Microsoft MCP implementations.</li>
+<li><a href="https://github.com/google/mcp">google/mcp</a> · <a href="https://github.com/googleapis/gcloud-mcp">googleapis/gcloud-mcp</a> ⭐928 · <a href="https://github.com/GoogleCloudPlatform/cloud-run-mcp">GoogleCloudPlatform/cloud-run-mcp</a> — official Google/GCP MCP surfaces.</li>
+<li><a href="https://github.com/cloudflare/mcp-server-cloudflare">cloudflare/mcp-server-cloudflare</a> — Workers, KV, R2, D1.</li>
+<li><a href="https://github.com/heroku/heroku-mcp-server">heroku/heroku-mcp-server</a> — full Heroku app lifecycle via CLI.</li>
+<li><a href="https://github.com/digitalocean-labs/mcp-digitalocean">digitalocean-labs/mcp-digitalocean</a> — droplets, App Platform, databases.</li>
+<li><a href="https://github.com/vercel/vercel-mcp-overview">vercel/vercel-mcp-overview</a> — hosted Vercel MCP for projects &amp; deployments.</li>
+<li><a href="https://github.com/hashicorp/terraform-mcp-server">hashicorp/terraform-mcp-server</a> ⭐1.6k — Terraform Registry + HCP Terraform.</li>
+<li><a href="https://github.com/hashicorp/vault-mcp-server">hashicorp/vault-mcp-server</a> — Vault secrets management.</li>
+<li><a href="https://github.com/opentofu/opentofu-mcp-server">opentofu/opentofu-mcp-server</a> — OpenTofu Registry docs.</li>
+<li><a href="https://www.pulumi.com/docs/ai/mcp-server/">Pulumi MCP Server</a> — hosted Pulumi Cloud automation.</li>
+<li>⚠️ <a href="https://github.com/alexei-led/aws-mcp-server">alexei-led/aws-mcp-server</a> — <strong>archived</strong>; AWS CLI execution with pipes/templates in Docker. Historically influential community MCP.</li>
+</ul>
+<h2 id="mcp-kubernetes--containers">MCP: Kubernetes &amp; Containers</h2>
+<ul>
+<li><a href="https://github.com/containers/kubernetes-mcp-server">containers/kubernetes-mcp-server</a> ⭐2.2k — K8s + OpenShift operations with a read-only mode and production guide.</li>
+<li><a href="https://github.com/skyhook-io/radar">skyhook-io/radar</a> ⭐3.8k — open-source Kubernetes UI with built-in MCP server for AI-assisted operations.</li>
+<li><a href="https://github.com/kubernetes-sigs/mcp-lifecycle-operator">kubernetes-sigs/mcp-lifecycle-operator</a> — declarative deployment/rollout of MCP servers on K8s.</li>
+<li><a href="https://github.com/Flux159/mcp-server-kubernetes">Flux159/mcp-server-kubernetes</a> ⭐1.6k — TypeScript K8s operations (pods, deployments, services).</li>
+<li><a href="https://github.com/manusa/kubernetes-mcp-server">manusa/kubernetes-mcp-server</a> — CRUD for any K8s resource + OpenShift support.</li>
+<li><a href="https://github.com/rohitg00/kubectl-mcp-server">rohitg00/kubectl-mcp-server</a> — natural-language cluster interaction.</li>
+<li>⚠️ <a href="https://github.com/alexei-led/k8s-mcp-server">alexei-led/k8s-mcp-server</a> — <strong>archived</strong>; kubectl/helm/istioctl/argocd in a Docker sandbox.</li>
+<li><a href="https://github.com/weibaohui/kom">weibaohui/kom</a> &amp; <a href="https://github.com/weibaohui/k8m">weibaohui/k8m</a> — Go K8s SDK with built-in DevOps tools; multi-cluster management UI.</li>
+<li><a href="https://github.com/controlplaneio-fluxcd/flux-operator/tree/main/cmd/mcp">controlplaneio-fluxcd/flux-operator (MCP)</a> ⭐774 — Flux MCP from CNCF maintainers: drift detection, RCA, multi-cluster compare, impersonation, read-only mode.</li>
+<li><a href="https://github.com/ckreiling/mcp-server-docker">ckreiling/mcp-server-docker</a> — Docker containers/images/volumes/networks.</li>
+<li><a href="https://github.com/manusa/podman-mcp-server">manusa/podman-mcp-server</a> — Podman, pods included.</li>
+<li><a href="https://github.com/docker/hub-mcp">docker/hub-mcp</a> &amp; <a href="https://github.com/docker/mcp-registry">docker/mcp-registry</a> — Docker Hub workflows; verified MCP registry/catalog.</li>
+</ul>
+<h2 id="mcp-observability--incident-response">MCP: Observability &amp; Incident Response</h2>
+<ul>
+<li><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a> ⭐3.6k — dashboards, incidents, datasources, and Prometheus/Alertmanager.</li>
+<li><a href="https://github.com/getsentry/toolkit">getsentry/toolkit</a> ⭐931 — home of Sentry's MCP (error tracking for human-in-the-loop debugging agents; formerly <code>sentry-mcp</code>).</li>
+<li><a href="https://github.com/datadog-labs/mcp-server">datadog-labs/mcp-server</a> + <a href="https://docs.datadoghq.com/mcp_server/setup/">Datadog MCP setup docs</a> — Datadog observability for agents.</li>
+<li><a href="https://docs.honeycomb.io/integrations/mcp/">Honeycomb MCP</a> — traces, metrics, logs, SLOs, triggers via OAuth 2.1/scoped keys.</li>
+<li><a href="https://www.elastic.co/docs/explore-analyze/ai-features/agent-builder/mcp-server">Elastic Agent Builder MCP</a> — build observability agents on the Elastic stack.</li>
+<li><a href="https://splunkbase.splunk.com/app/7931">Splunk MCP Server (Splunkbase)</a> — official Splunk-platform MCP app.</li>
+<li><a href="https://github.com/newrelic/mcp-server">newrelic/mcp-server</a> — APM, dashboards, NRQL.</li>
+<li><a href="https://github.com/last9/last9-mcp-server">last9/last9-mcp-server</a> — pull production logs/metrics/traces into local agent contexts.</li>
+<li><a href="https://github.com/pydantic/logfire-mcp">pydantic/logfire-mcp</a> — OpenTelemetry-native observability.</li>
+<li><a href="https://github.com/comet-ml/opik-mcp">Comet-ML/opik-mcp</a> — LLM observability and traces.</li>
+<li><a href="https://github.com/pab1it0/prometheus-mcp-server">pab1it0/prometheus-mcp-server</a> — query and analyze Prometheus.</li>
+<li>⚠️ <a href="https://github.com/dynatrace-oss/dynatrace-mcp">dynatrace-oss/dynatrace-mcp</a> — <strong>archived 2026</strong>; still referenced widely but no longer maintained.</li>
+<li>⚠️ <a href="https://github.com/PagerDuty/pagerduty-mcp-server">PagerDuty/pagerduty-mcp-server</a> — <strong>archived</strong>; PagerDuty's incident MCP has moved to product-managed surfaces.</li>
+</ul>
+<h2 id="mcp-cicd--version-control">MCP: CI/CD &amp; Version Control</h2>
+<ul>
+<li><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a> ⭐33.7k — GitHub's official MCP (repos, issues, PRs, Actions).</li>
+<li><a href="https://docs.gitlab.com/user/gitlab_duo/model_context_protocol/mcp_server/">GitLab MCP server</a> — GitLab-hosted MCP endpoint.</li>
+<li><a href="https://github.com/atlassian/atlassian-mcp-server">atlassian/atlassian-mcp-server</a> — official Rovo MCP: Jira, Confluence, JSM, Bitbucket, Compass.</li>
+<li><a href="https://linear.app/docs/mcp">Linear MCP</a> — hosted MCP with OAuth 2.1 dynamic registration and a read-only endpoint.</li>
+<li><a href="https://github.com/microsoft/azure-devops-mcp">microsoft/azure-devops-mcp</a> ⭐2.1k — official Azure DevOps MCP (repos, work items, pipelines).</li>
+<li><a href="https://github.com/jenkinsci/mcp-server-plugin">jenkinsci/mcp-server-plugin</a> — Jenkins as an MCP server.</li>
+<li><a href="https://github.com/argoproj-labs/mcp-for-argocd">argoproj-labs/mcp-for-argocd</a> ⭐588 — Argo CD GitOps MCP.</li>
+<li><a href="https://github.com/CircleCI-Public/mcp-server-circleci">CircleCI-Public/mcp-server-circleci</a> — build failure logs, flaky-test detection.</li>
+<li><a href="https://github.com/harness/mcp-server">harness/mcp-server</a> — CI/CD pipelines with a risk-tiered model that blocks destructive ops without confirmation.</li>
+<li><a href="https://github.com/Tiberriver256/mcp-server-azure-devops">Tiberriver256/mcp-server-azure-devops</a> ⭐394 — community Azure DevOps MCP.</li>
+<li>⚠️ <a href="https://github.com/ko1ynnky/github-actions-mcp-server">ko1ynnky/github-actions-mcp-server</a> — <strong>archived</strong>; GitHub Actions interaction.</li>
+</ul>
+<h2 id="mcp-security--agent-safety">MCP: Security &amp; Agent Safety</h2>
+<ul>
+<li><a href="https://owasp.org/www-project-mcp-top-10/">OWASP MCP Top 10</a> — the risk framework for MCP-powered agentic pipelines.</li>
+<li><a href="https://github.com/snyk/agent-scan">snyk/agent-scan</a> ⭐3.1k — security scanner for AI agents, MCP servers, and agent skills.</li>
+<li><a href="https://github.com/snyk/studio-mcp">snyk/studio-mcp</a> + <a href="https://docs.snyk.io/evo-by-snyk/agentic-security-with-snyk-studio/getting-started-with-snyk-studio">Snyk Studio docs</a> — SCA/code/IaC/container/SBOM/secret scans via <code>snyk mcp</code>.</li>
+<li><a href="https://github.com/SonarSource/sonarqube-mcp-server">SonarSource/sonarqube-mcp-server</a> ⭐665 — code quality &amp; security insights.</li>
+<li><a href="https://github.com/cisco-ai-defense/mcp-scanner">cisco-ai-defense/mcp-scanner</a> ⭐1.1k — scan MCP servers with YARA rules + LLM-as-judge.</li>
+<li><a href="https://github.com/aquasecurity/trivy-mcp">aquasecurity/trivy-mcp</a> — Trivy vulnerability/misconfiguration/secret scanning via MCP.</li>
+<li><a href="https://github.com/CrowdStrike/falcon-mcp">CrowdStrike/falcon-mcp</a> — Falcon SOC automation (threat detection, NG-SIEM, CSPM).</li>
+<li><a href="https://github.com/okta/okta-mcp-server">okta/okta-mcp-server</a> — identity workflows for agents.</li>
+<li><a href="https://docs.wiz.io/dev/win-mcp-server">Wiz WIN MCP Server</a> — CNAPP/cloud security.</li>
+<li><a href="https://github.com/DopplerHQ/mcp-server">DopplerHQ/mcp-server</a> — secrets management (write-capable: scope service tokens).</li>
+<li><a href="https://github.com/BurtTheCoder/mcp-shodan">BurtTheCoder/mcp-shodan</a> &amp; <a href="https://github.com/BurtTheCoder/mcp-virustotal">mcp-virustotal</a> — OSINT/threat-intel lookups.</li>
+<li><a href="https://github.com/nolabs-ai/nono">nono (nolabs)</a> — agent sandboxing CLI for local agent workloads (featured on <a href="https://agenticdevops.fm/episodes/ai-agent-sandboxing-with-nono">Agentic DevOps E13</a>).</li>
+</ul>
+<h2 id="mcp-data-platform--finops">MCP: Data Platform &amp; FinOps</h2>
+<ul>
+<li><a href="https://github.com/googleapis/mcp-toolbox">googleapis/mcp-toolbox</a> ⭐16.7k — MCP Toolbox for Databases.</li>
+<li><a href="https://github.com/bytebase/dbhub">bytebase/dbhub</a> ⭐3.7k — universal SQL MCP (Postgres, MySQL, SQL Server, SQLite; read-only mode, row limits).</li>
+<li><a href="https://github.com/mongodb-js/mongodb-mcp-server">mongodb-js/mongodb-mcp-server</a> ⭐1.1k — MongoDB/Atlas.</li>
+<li><a href="https://github.com/redis/mcp-redis">redis/mcp-redis</a> — natural-language Redis management + vector search.</li>
+<li><a href="https://github.com/dbt-labs/dbt-mcp">dbt-labs/dbt-mcp</a> — dbt Core/Fusion/Platform context.</li>
+<li><a href="https://github.com/vantage-sh/vantage-mcp-server">vantage-sh/vantage-mcp-server</a> — FinOps: cloud spend, budgets, anomalies.</li>
+<li><a href="https://github.com/infracost/infracost">infracost/infracost</a> ⭐12.6k — cloud cost estimates in CLIs, CI/CD, and coding agents ("shift FinOps left").</li>
+</ul>
+<h2 id="agent-skills-ecosystems">Agent Skills Ecosystems</h2>
+<p>Portable skill packs agents load on demand — the fastest-growing layer of 2026.</p>
+<ul>
+<li><a href="https://github.com/anthropics/skills">anthropics/skills</a> ⭐181.8k — the Agent Skills standard + official Anthropic pack.</li>
+<li><a href="https://github.com/google/skills">google/skills</a> · <a href="https://github.com/microsoft/skills">microsoft/skills</a> · <a href="https://github.com/microsoft/azure-skills">microsoft/azure-skills</a> · <a href="https://github.com/microsoft/azure-devops-skills">microsoft/azure-devops-skills</a> — official vendor skill packs.</li>
+<li><a href="https://github.com/harness/harness-skills">harness/harness-skills</a> — natural-language CI/CD skills for Claude Code/Cursor/Copilot.</li>
+<li><a href="https://github.com/VoltAgent/awesome-agent-skills">VoltAgent/awesome-agent-skills</a> ⭐35.9k — 1,000+ skills from official teams and community.</li>
+<li><a href="https://github.com/BagelHole/DevOps-Security-Agent-Skills">BagelHole/DevOps-Security-Agent-Skills</a> ⭐1.2k — 80+ DevOps/security/infra/compliance skills.</li>
+<li><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills</a> — engineering skill reference (structure/style input).</li>
+<li><a href="https://github.com/antonbabenko/terraform-skill">antonbabenko/terraform-skill</a> — Terraform prompt/workflow skill.</li>
+<li><a href="https://github.com/DevOpsAIguru123/awesome-agentic-devops#install-skills-into-your-coding-agent">DevOpsAIguru123 skill installer</a> — one command installs 360+ official skills into Claude Code/Cursor/Codex/VS Code.</li>
+</ul>
+<h2 id="platforms--products">Platforms &amp; Products</h2>
+<ul>
+<li><a href="https://github.com/agenticsorg/devops">Agentic DevOps (agenticsorg)</a> — open-source autonomous DevOps platform on the OpenAI Agents SDK (AWS + GitHub, live demo at <a href="https://agentic-devops.fly.dev">agentic-devops.fly.dev</a>); <code>pip install agentic-devops</code>.</li>
+<li><a href="https://opsera.ai/">Opsera Agentic DevOps</a> — unified DevOps platform with agentic pipelines and compliance automation.</li>
+<li><a href="https://azure.microsoft.com/en-us/solutions/devops">GitHub Copilot + Azure Agentic DevOps</a> — Microsoft's productized agentic SDLC.</li>
+<li><a href="https://www.harness.io/products/platform">Harness AI DevOps Agent</a> — AI DevOps agent embedded in the Harness platform.</li>
+<li><a href="https://www.anyshift.io/">Anyshift</a> — always-on AI SRE that proactively finds risks (featured on <a href="https://agenticdevops.fm/episodes/ai-sres-chat-with-your-infrastructure-with-anyshift">Agentic DevOps E10</a>).</li>
+<li><a href="https://github.com/devopness/devopness">Devopness</a> — AI DevOps on your cloud: one MCP, deterministic deployments.</li>
+<li><a href="https://www.cloudbees.com/agentic-devops-world">CloudBees Agentic DevOps World</a> — 2026 world roadshow on agentic DevOps.</li>
+<li><a href="https://blog.cloudgeni.ai/10-best-ai-agents-for-cloud-infrastructure-management-in-2026">10 Best AI Agents for Cloud Infrastructure 2026 — CloudGeni</a> — vendor comparison across IaC support, remediation, incident response.</li>
+</ul>
+<h2 id="podcasts-talks--video">Podcasts, Talks &amp; Video</h2>
+<p><strong>Podcast: <a href="https://agenticdevops.fm">Agentic DevOps — AI Engineering for Infrastructure</a></strong> (Bret Fisher, since May 2025 — "real-world AI agents for DevOps without the hand-wavy hype"). Full extracted episode index:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Episode</th>
+<th>Guest</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E14</td>
+<td><a href="https://agenticdevops.fm/episodes/rogue-ai-or-just-sloppy-ops">Rogue AI or Just Sloppy Ops?</a></td>
+<td>—</td>
+<td>2026-09-25</td>
+</tr>
+<tr>
+<td>E13</td>
+<td><a href="https://agenticdevops.fm/episodes/ai-agent-sandboxing-with-nono">AI Agent Sandboxing with Nono</a></td>
+<td>Luke Hinds (nolabs)</td>
+<td>2026-08-21</td>
+</tr>
+<tr>
+<td>E12</td>
+<td><a href="https://agenticdevops.fm/episodes/ai-native-engineering-culture-from-a-cto">AI-Native Engineering Culture from a CTO</a></td>
+<td>Mike Rollins</td>
+<td>2026-08-01</td>
+</tr>
+<tr>
+<td>E11</td>
+<td><a href="https://agenticdevops.fm/episodes/safer-agent-automation-with-github-agentic-workflows">Safer Agent Automation with GitHub Agentic Workflows</a></td>
+<td>Don Syme (GitHub Next), Peli de Halleux (MSR)</td>
+<td>2026-06-17</td>
+</tr>
+<tr>
+<td>E10</td>
+<td><a href="https://agenticdevops.fm/episodes/ai-sres-chat-with-your-infrastructure-with-anyshift">AI SREs, Chat With Your Infrastructure with Anyshift</a></td>
+<td>Anyshift founders</td>
+<td>2026-05-06</td>
+</tr>
+<tr>
+<td>E9</td>
+<td><a href="https://agenticdevops.fm/episodes/can-ai-agents-safely-become-devops-engineers">Can AI Agents Safely Become DevOps Engineers?</a></td>
+<td>Sam Alba (Mendral)</td>
+<td>2026-04-29</td>
+</tr>
+<tr>
+<td>E8</td>
+<td><a href="https://agenticdevops.fm/episodes/our-favorite-agent-setups">Our Favorite Agent Setups</a></td>
+<td>Brian Christner</td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>E7</td>
+<td><a href="https://agenticdevops.fm/episodes/four-months-felt-like-four-years">Four Months Felt Like Four Years</a></td>
+<td>Bret &amp; Nirmal</td>
+<td>2026-03-26</td>
+</tr>
+<tr>
+<td>E6</td>
+<td><a href="https://agenticdevops.fm/episodes/ai-hype-vs-reality-real-stats-from-laura-tacho-cto-of-dx">AI Hype vs. Reality — Real Stats</a></td>
+<td>Laura Tacho (DX)</td>
+<td>2025-09-25</td>
+</tr>
+<tr>
+<td>E5</td>
+<td><a href="https://agenticdevops.fm/episodes/my-new-favorite-ai-terminal-prompt-injection-and-more">My Favorite AI Terminal, Prompt Injection, and More</a></td>
+<td>—</td>
+<td>2025-08-01</td>
+</tr>
+<tr>
+<td>E4</td>
+<td><a href="https://agenticdevops.fm/episodes/aws-agentic-devops-with-the-eks-mcp-server">AWS Agentic DevOps with the EKS MCP Server</a></td>
+<td>Rajdeep Saha (AWS)</td>
+<td>2025-07-22</td>
+</tr>
+<tr>
+<td>E3</td>
+<td><a href="https://agenticdevops.fm/episodes/agentic-ci-cd-with-solomon-hykes-of-dagger">Agentic CI/CD with Solomon Hykes of Dagger</a></td>
+<td>Solomon Hykes</td>
+<td>2025-07-14</td>
+</tr>
+<tr>
+<td>E2</td>
+<td><a href="https://agenticdevops.fm/episodes/running-ai-mcp-tools-on-kubernetes-with-kagent">Running AI MCP Tools on Kubernetes with kagent</a></td>
+<td>Eitan Yarmush (Solo.io)</td>
+<td>2025-07-08</td>
+</tr>
+<tr>
+<td>E1</td>
+<td><a href="https://agenticdevops.fm/episodes/is-ai-ready-for-devops">Is AI ready for DevOps?</a></td>
+<td>Bret &amp; Nirmal</td>
+<td>2025-06-03</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Video:</strong></p>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/research/video/introducing-github-agentic-workflows-ai-that-runs-your-repo/">Introducing GitHub Agentic Workflows: AI that runs your repo — Microsoft Research Forum</a> (Peli de Halleux &amp; Yash Lara, May 2026) — markdown-as-workflow-language, sandbox layers, "order and orchestration, not swarms and chaos."</li>
+<li><a href="https://www.youtube.com/watch?v=zmM8VISTOwo">Safer Agent Automation with GitHub Agentic Workflows — Bret Fisher (YouTube)</a> — video version of E11 with Don Syme &amp; Peli de Halleux.</li>
+<li><a href="https://www.youtube.com/watch?v=647pVgfV2yU">Agentic Workflows with Don Syme — Scott Hanselman (YouTube)</a>.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLX0bTycx8m-XeTa1dAT_PIdzNYgUI45bZ">Agentic DevOps playlist — Bret Fisher (YouTube)</a> — all podcast episodes in video.</li>
+<li><a href="https://developer.microsoft.com/en-us/reactor/events/26634/">The future of software creation with Agentic DevOps — Microsoft Reactor</a> — recorded talk, Copilot + agents across the SDLC.</li>
+<li><a href="https://www.youtube.com/watch?v=Pz-KqJHP5JE">Microsoft's NEW AI Agentic DevOps — FiraX AI (YouTube)</a> — accessible overview of the Microsoft vision.</li>
+</ul>
+<h2 id="articles--reports">Articles &amp; Reports</h2>
+<ul>
+<li><a href="https://dora.dev/dora-report-2025/">DORA: State of AI-assisted Software Development 2025</a> — AI as an <strong>amplifier</strong> of existing org strengths/weaknesses; unstable AI adoption correlates with <em>reduced</em> throughput and stability. (<a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">Google Cloud announcement</a>, <a href="https://dora.dev/ai/gen-ai-report/">DORA gen-AI research</a>, <a href="https://dora.dev/insights/">insights</a>)</li>
+<li><a href="https://opsera.ai/resources/report/ai-coding-impact-2026-benchmark-report">Opsera 2026 Benchmark Report: AI coding impact</a> — 90% of enterprise teams use AI in the SDLC; PR review time 4.6× longer; 21% of AI licenses underutilized.</li>
+<li><a href="https://www.stackone.com/blog/ai-agent-tools-landscape-2026">StackOne: 120+ Agentic AI Tools Across 11 Categories</a> — the broadest current landscape map (frameworks → protocols → enterprise platforms).</li>
+<li><a href="https://www.harness.io/blog/agentic-ai-in-devops-the-architects-guide-to-autonomous-infrastructure">Harness: Agentic AI in DevOps — Architect's Guide</a> — C-P-A anatomy, three horizons, guardrails.</li>
+<li><a href="https://opsera.ai/blog/what-is-agentic-devops">Opsera: What is Agentic DevOps?</a> — definition, pillars, AIDLC, adoption.</li>
+<li><a href="https://super-agentic.ai/agentic-devops">Superagentic AI: Agentic DevOps</a> — theoretical framework and agent taxonomies.</li>
+<li><a href="https://developer.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle">Microsoft: Agentic DevOps in action</a> — reimagining each SDLC phase with agents.</li>
+<li><a href="https://developers.redhat.com/articles/operationalize-ai-agents-on-openshift-with-kubernetes-primitives">Red Hat: Operationalize AI agents on OpenShift</a> — K8s primitives for manageable AIOps.</li>
+</ul>
+<h2 id="communities">Communities</h2>
+<ul>
+<li><a href="https://discord.gg/ZSPktpB3eW">Agentic DevOps Discord</a> — from the awesome-devops-mcp maintainers.</li>
+<li><a href="https://discord.gg/devops">DevOps Discord (Bret Fisher)</a> — broader community behind the podcast.</li>
+<li><a href="https://bit.ly/kagentdiscord">kagent Discord</a> — cloud-native agentic AI community.</li>
+<li><a href="https://bretfisher.com/gasa-workshop/">Bret's free GitHub security workshop (gasa)</a> — hands-on repo/workflow hardening against supply-chain attacks.</li>
+</ul>
+<h2 id="safety-first">Safety First</h2>
+<p>Agentic DevOps agents can change infrastructure. Ground rules distilled from the sources above:</p>
+<ol type="1">
+<li><strong>Read-only or proposal mode first</strong> — gh-aw's <code>staged: true</code>, read-only MCP modes (K8s, DBHub, Flux), and approval gates before any write.</li>
+<li><strong>Beware the "lethal trifecta"</strong> — private data + untrusted content (PRs, issues, web) + outbound access in one sandbox. GitHub's answer: six defense layers; yours should be at least one.</li>
+<li><strong>Policy-as-code beats vibes</strong> — deterministic checks (OPA, protected approvals) must gate probabilistic agents; block <code>terraform destroy</code>-class actions outright.</li>
+<li><strong>Scope credentials per agent</strong> — diagnosis agents get read-only; remediation agents get namespace-scoped writes; secrets via Doppler/Vault MCPs, never in prompts.</li>
+<li><strong>Record everything</strong> — black-box recorder / compliance evidence packets for every production-adjacent run (see the <a href="https://owasp.org/www-project-mcp-top-10/">OWASP MCP Top 10</a> and <a href="https://github.com/DevOpsAIguru123/awesome-agentic-devops/blob/main/docs/safety-model.md">DevOpsAIguru123's safety model</a>).</li>
+</ol>
+<h2 id="related-awesome-lists">Related Awesome Lists</h2>
+<ul>
+<li><a href="https://github.com/DevOpsAIguru123/awesome-agentic-devops">DevOpsAIguru123/awesome-agentic-devops</a> — scored, official-first catalog with CI auditing and skill installer (80+ entries).</li>
+<li><a href="https://github.com/agenticdevops/awesome-devops-mcp">agenticdevops/awesome-devops-mcp</a> — MCP servers for DevOps practitioners.</li>
+<li><a href="https://github.com/rohitg00/awesome-devops-mcp-servers">rohitg00/awesome-devops-mcp-servers</a> ⭐1k — DevOps-focused MCP discovery list.</li>
+<li><a href="https://github.com/punkpeye/awesome-mcp-servers">punkpeye/awesome-mcp-servers</a> ⭐96.5k — the canonical all-domain MCP list.</li>
+<li><a href="https://github.com/punkpeye/awesome-mcp-clients">punkpeye/awesome-mcp-clients</a> — MCP-compatible clients.</li>
+<li><a href="https://github.com/e2b-dev/awesome-ai-agents">e2b-dev/awesome-ai-agents</a> ⭐30.5k — autonomous agent list.</li>
+<li><a href="https://github.com/github/awesome-copilot">github/awesome-copilot</a> ⭐40.1k — Copilot instructions/agents/skills.</li>
+<li><a href="https://github.com/hesreallyhim/awesome-claude-code">hesreallyhim/awesome-claude-code</a> ⭐55.9k — Claude Code resources.</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>PRs welcome. Requirements: (1) the link must be live and relevant to <em>agentic</em> DevOps — not generic AIOps or plain automation; (2) one-line operator-focused description; (3) note archived status if applicable. See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<h2 id="license">License</h2>
+<p><a href="LICENSE">MIT</a></p>
+</main>
+<footer>
+  Maintained by <a href="https://github.com/adventurewave-labs">Adventure Wave Labs</a> ·
+  <a href="https://github.com/adventurewave-labs/awesome-agentic-devops">Source &amp; contributions</a> · MIT license ·
+  Every GitHub link verified 2026-10-17 · List updated: 2026-10-17
+</footer>
+</body>
+</html>

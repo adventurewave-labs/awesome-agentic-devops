@@ -3,6 +3,8 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> **Web:** [agentic-devops.online](https://agentic-devops.online) — this list as a website (GitHub Pages; rebuild with `scripts/build-site.sh` after editing this README).
+
 A curated list of **Agentic DevOps** resources — the shift from deterministic, script-driven DevOps to autonomous AI agents that reason, act on infrastructure, self-correct, and collaborate with humans across the software delivery lifecycle.
 
 Curated from six seed sources, then extended with independent web, GitHub, and YouTube research. **Every GitHub link was verified against the live API on 2026-10-17** (archived/moved repos were caught and handled — see the ⚠️ notes). Star counts are ⭐ as of that date.
