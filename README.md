@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.svg" alt="awesome-agentic-devops — animated banner" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="Awesome Agentic DevOps banner — curated star over a conveyor of resource categories" width="100%"></p>
 
 
 # Awesome Agentic DevOps
