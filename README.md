@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="docs/hero.svg" width="100%" alt="Awesome Agentic DevOps — animated pipeline: commit → CI → AI agent → Kubernetes → deploy, with an MCP orbit and a live terminal prompt">
-</p>
+<p align="center"><img src="assets/banner.svg" alt="Awesome Agentic DevOps banner — curated star over a conveyor of resource categories" width="100%"></p>
+
 
 # Awesome Agentic DevOps
 
