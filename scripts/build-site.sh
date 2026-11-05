@@ -9,6 +9,9 @@ SITE_URL="https://agentic-devops.online"
 LAST_UPDATED=$(git log -1 --format=%as -- README.md)
 mkdir -p docs
 
+# Keep LICENSE / CONTRIBUTING.md reachable from the Pages site (README links relatively)
+cp -f LICENSE CONTRIBUTING.md docs/
+
 pandoc README.md -f gfm -t html5 --wrap=none -o docs/_body.html
 
 cat > docs/_head.html <<'HEAD'
@@ -133,7 +136,7 @@ cat > docs/_foot.html <<'FOOT'
 FOOT
 
 cat docs/_head.html docs/_body.html docs/_foot.html > docs/index.html
-sed -i '' "s|{{LAST_UPDATED}}|$LAST_UPDATED|" docs/index.html
+sed "s|{{LAST_UPDATED}}|$LAST_UPDATED|" docs/index.html > docs/.index.html.tmp && mv docs/.index.html.tmp docs/index.html
 rm docs/_head.html docs/_body.html docs/_foot.html
 
 cat > docs/sitemap.xml <<SITEMAP
