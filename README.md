@@ -216,6 +216,7 @@ Official-first MCP servers for cloud providers and IaC.
 - [dbt-labs/dbt-mcp](https://github.com/dbt-labs/dbt-mcp) — dbt Core/Fusion/Platform context.
 - [vantage-sh/vantage-mcp-server](https://github.com/vantage-sh/vantage-mcp-server) — FinOps: cloud spend, budgets, anomalies.
 - [infracost/infracost](https://github.com/infracost/infracost) ⭐12.6k — cloud cost estimates in CLIs, CI/CD, and coding agents ("shift FinOps left").
+- [azmartone67/dchub-mcp-server](https://github.com/azmartone67/dchub-mcp-server) — remote MCP for data-center & grid-power intelligence (DCPI across 300+ markets); free to start at https://dchub.cloud/connect?utm_source=adventurewave-agentic-devops&utm_medium=listing&utm_campaign=directories (endpoint https://dchub.cloud/mcp).
 
 ## Agent Skills Ecosystems
 
