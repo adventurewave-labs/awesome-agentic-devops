@@ -115,6 +115,7 @@ The "development agents" side of the lifecycle — and the workflow machinery th
 - [microsoft/apm](https://github.com/microsoft/apm) — Agent Project Manager: Microsoft's spec-driven agent workflow runner.
 - [GitHub Next: Continuous AI](https://githubnext.com/projects/continuous-ai/) — research program behind self-improving repositories.
 - [marcuspat/turbo-flow](https://github.com/marcuspat/turbo-flow) ⭐176 — the rules layer for AI-written code: a fail-closed cross-model review gate (builder ≠ reviewer, verdict as required status check), git-versioned agent memory, and worktree isolation — pure bash, any harness.
+- [agent-qa](https://vostride.com) — runs natural-language web, Android and iOS regression checks through CLI or MCP, with persistent memidex memory, validated self-improvement and step/screenshot evidence for delivery reviews; early-stage FSL-1.1-ALv2 software with competing-use restrictions and separate model/infrastructure costs. [Quickstart](https://vostride.com/docs/agent-qa/quickstart).
 
 ## Agent Frameworks & Toolkits
 
