@@ -34,7 +34,7 @@ d.text((80, 120), "❯_", font=dom_f, fill=ACCENT)
 d.text((80, 220), "Awesome", font=title_f, fill=FG)
 d.text((80, 320), "Agentic DevOps", font=title_f, fill=ACCENT)
 d.text((84, 448), "AI agents · MCP servers · SRE agents · agentic CI/CD", font=sub_f, fill=MUTED)
-d.text((84, 520), "agentic-devops.online", font=dom_f, fill=FG)
+d.text((84, 520), "agenticdevops.online", font=dom_f, fill=FG)
 
 os.makedirs("docs", exist_ok=True)
 img.save("docs/og.png", optimize=True)
