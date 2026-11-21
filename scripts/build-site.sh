@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Regenerate the GitHub Pages site in docs/ from README.md.
 # Run from anywhere: scripts/build-site.sh  (requires: pandoc)
-# Hand-authored files (llms.txt, robots.txt, CNAME, favicon.svg, og.png) are NOT touched.
+# Hand-authored files (llms.txt, robots.txt, favicon.svg, og.png, vercel.json) are NOT touched.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -147,3 +147,9 @@ cat > docs/sitemap.xml <<SITEMAP
 SITEMAP
 
 echo "Built docs/index.html + docs/sitemap.xml (lastmod $LAST_UPDATED)"
+
+# The legacy domain is allowed only in Vercel's host-redirect rules.
+if grep -R -n --exclude=vercel.json 'agentic-devops\.online' README.md scripts docs; then
+  echo "Legacy canonical-domain reference found outside docs/vercel.json" >&2
+  exit 1
+fi
