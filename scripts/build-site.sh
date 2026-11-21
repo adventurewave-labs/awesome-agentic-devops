@@ -5,7 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-SITE_URL="https://agentic-devops.online"
+SITE_URL="https://agenticdevops.online"
 LAST_UPDATED=$(git log -1 --format=%as -- README.md)
 mkdir -p docs
 
@@ -23,43 +23,43 @@ cat > docs/_head.html <<'HEAD'
 <title>Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents</title>
 <meta name="description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
 <meta name="theme-color" content="#0d9488">
-<link rel="canonical" href="https://agentic-devops.online/">
+<link rel="canonical" href="https://agenticdevops.online/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Awesome Agentic DevOps">
 <meta property="og:title" content="Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents">
 <meta property="og:description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
-<meta property="og:url" content="https://agentic-devops.online/">
-<meta property="og:image" content="https://agentic-devops.online/og.png">
+<meta property="og:url" content="https://agenticdevops.online/">
+<meta property="og:image" content="https://agenticdevops.online/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Awesome Agentic DevOps — AI Agents, MCP Servers &amp; SRE Agents">
 <meta name="twitter:description" content="Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.">
-<meta name="twitter:image" content="https://agentic-devops.online/og.png">
+<meta name="twitter:image" content="https://agenticdevops.online/og.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://agentic-devops.online/#website",
-      "url": "https://agentic-devops.online/",
+      "@id": "https://agenticdevops.online/#website",
+      "url": "https://agenticdevops.online/",
       "name": "Awesome Agentic DevOps",
       "description": "Curated, link-verified map of agentic DevOps: open-source SRE agents, MCP servers, coding agents, agentic CI/CD, frameworks, protocols, and research.",
       "inLanguage": "en",
-      "publisher": { "@id": "https://agentic-devops.online/#org" }
+      "publisher": { "@id": "https://agenticdevops.online/#org" }
     },
     {
       "@type": "Organization",
-      "@id": "https://agentic-devops.online/#org",
+      "@id": "https://agenticdevops.online/#org",
       "name": "Adventure Wave Labs",
       "url": "https://github.com/adventurewave-labs",
       "sameAs": ["https://github.com/adventurewave-labs"]
     },
     {
       "@type": "FAQPage",
-      "@id": "https://agentic-devops.online/#faq",
+      "@id": "https://agenticdevops.online/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -118,7 +118,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13
 </head>
 <body>
 <nav class="topbar">
-  <a class="brand" href="/">❯ agentic-devops.online</a>
+  <a class="brand" href="/">❯ agenticdevops.online</a>
   <a class="gh" href="https://github.com/adventurewave-labs/awesome-agentic-devops">GitHub ↗</a>
 </nav>
 <main>
