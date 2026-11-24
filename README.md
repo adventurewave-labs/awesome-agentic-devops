@@ -283,6 +283,7 @@ Portable skill packs agents load on demand — the fastest-growing layer of 2026
 - [Superagentic AI: Agentic DevOps](https://super-agentic.ai/agentic-devops) — theoretical framework and agent taxonomies.
 - [Microsoft: Agentic DevOps in action](https://developer.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle) — reimagining each SDLC phase with agents.
 - [Red Hat: Operationalize AI agents on OpenShift](https://developers.redhat.com/articles/operationalize-ai-agents-on-openshift-with-kubernetes-primitives) — K8s primitives for manageable AIOps.
+- [AIAgentSearch.ai: AI SRE Agents Compared](https://aiagentsearch.ai/ai-sre-agents-compared.html) — Independent comparison of 14 AI SRE agents on what each can change in production and who must approve it.
 
 ## Communities
 
